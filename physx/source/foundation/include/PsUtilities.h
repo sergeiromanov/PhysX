@@ -123,7 +123,7 @@ PX_CUDA_CALLABLE PX_FORCE_INLINE void order(T& x, T& y, E1& xe1, E1& ye1)
 }
 
 #if PX_GCC_FAMILY && !PX_EMSCRIPTEN  && !PX_LINUX
-__attribute__((noreturn))
+//__attribute__((noreturn))
 #endif
     PX_INLINE void debugBreak()
 {
