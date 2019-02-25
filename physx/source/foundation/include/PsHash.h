@@ -109,6 +109,15 @@ PX_INLINE uint32_t hash(const void* ptr)
 #endif
 }
 
+PX_FORCE_INLINE uint32_t hash(const unsigned long key)
+{
+#if PX_P64_FAMILY
+	return hash(uint64_t(key));
+#else
+	return hash(uint32_t(key));
+#endif
+}
+
 // Hash function for pairs
 template <typename F, typename S>
 PX_INLINE uint32_t hash(const Pair<F, S>& p)
