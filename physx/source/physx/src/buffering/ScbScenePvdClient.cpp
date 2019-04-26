@@ -879,6 +879,7 @@ void ScbScenePvdClient::setCreateContactReports(bool b)
 
 void ScbScenePvdClient::visualize(PxArticulationLink& link)
 {
+#if PX_ENABLE_DEBUG_VISUALIZATION
 	NpArticulationLink& npLink = static_cast<NpArticulationLink&>(link);
 	const void* itemId = npLink.getInboundJoint();
 	if(itemId && mUserRender)
@@ -886,6 +887,7 @@ void ScbScenePvdClient::visualize(PxArticulationLink& link)
 		PvdConstraintVisualizer viz(itemId, *mUserRender);
 		npLink.visualizeJoint(viz);
 	}
+#endif
 }
 
 void ScbScenePvdClient::visualize(const PxRenderBuffer& debugRenderable)

@@ -88,7 +88,13 @@ Operating system defines, see http://sourceforge.net/p/predef/wiki/OperatingSyst
 #elif defined(_WIN32) // note: _M_PPC implies _WIN32
 #define PX_WIN32 1
 #elif defined(__ANDROID__)
+
+#ifdef DIM_PLATFORM_MAGICLEAP
+#define PX_LINUX 1
+#else
 #define PX_ANDROID 1
+#endif
+
 #elif defined(__linux__) || defined (__EMSCRIPTEN__) // note: __ANDROID__ implies __linux__
 #define PX_LINUX 1
 #elif defined(__APPLE__) && (defined(__arm__) || defined(__arm64__))

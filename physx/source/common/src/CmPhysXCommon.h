@@ -36,7 +36,9 @@
 #include "Ps.h"
 
 // Enable debug visualization
+#ifndef DIM_PLATFORM_MAGICLEAP
 #define PX_ENABLE_DEBUG_VISUALIZATION	1
+#endif
 
 // Enable simulation statistics generation
 #define PX_ENABLE_SIM_STATS 1
