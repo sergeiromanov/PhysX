@@ -89,7 +89,7 @@ Operating system defines, see http://sourceforge.net/p/predef/wiki/OperatingSyst
 #define PX_WIN32 1
 #elif defined(__ANDROID__)
 
-#ifdef DIM_PLATFORM_MAGICLEAP
+#ifdef DIMX_PLATFORM_MAGICLEAP
 #define PX_LINUX 1
 #else
 #define PX_ANDROID 1

@@ -64,7 +64,7 @@ MutexImpl::MutexImpl()
 	pthread_mutexattr_init(&attr);
 	pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
 #if !PX_ANDROID
-    #ifndef DIM_PLATFORM_MAGICLEAP
+    #ifndef DIMX_PLATFORM_MAGICLEAP
 	// mimic default windows behavior where applicable
 	pthread_mutexattr_setprotocol(&attr, PTHREAD_PRIO_INHERIT);
     #endif

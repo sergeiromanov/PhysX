@@ -37,7 +37,7 @@
 
 #include <math.h>
 #if !PX_APPLE_FAMILY && !defined(ANDROID) && !defined(__CYGWIN__) && !PX_PS4 && !PX_EMSCRIPTEN
-#ifndef DIM_PLATFORM_MAGICLEAP
+#ifndef DIMX_PLATFORM_MAGICLEAP
 #include <bits/local_lim.h> // PTHREAD_STACK_MIN
 #endif
 #endif
@@ -273,7 +273,7 @@ __attribute__((noreturn))
 
 void ThreadImpl::kill()
 {
-#if !defined(ANDROID) && !defined(DIM_PLATFORM_MAGICLEAP)
+#if !defined(ANDROID) && !defined(DIMX_PLATFORM_MAGICLEAP)
 	if(getThread(this)->state == _PxThreadStarted)
 		pthread_cancel(getThread(this)->thread);
 	getThread(this)->state = _PxThreadStopped;

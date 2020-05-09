@@ -36,7 +36,7 @@
 #include "Ps.h"
 
 // Enable debug visualization
-#ifndef DIM_PLATFORM_MAGICLEAP
+#ifndef DIMX_PLATFORM_MAGICLEAP
 #define PX_ENABLE_DEBUG_VISUALIZATION	1
 #endif
 
